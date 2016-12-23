@@ -29,8 +29,13 @@ function draw(){
     enemies[i].show();
     enemies[i].move();
     if(enemies[i].y >= height){
-      gameOver = confirm("YOU LOOSE :( .... Do you want to play again?")
-      restartGame()
+      gameOver = confirm("YOU LOOSE :( .... Do you want to play again?");
+        if(gameOver){
+          restartGame()
+        }else{
+          window.location = "file:///F:/Descargas/Nueva%20carpeta/Space-Invaders-in-Java-Script-master/Space%20Invaders/index2.html";
+        }
+      
     }
   }
     for(var i = 0; i < bullets.length; i++ ){
